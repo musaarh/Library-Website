@@ -1,38 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mmakau Library — QR Code Generator</title>
-  <style>
-    body{font-family:system-ui,sans-serif;background:#f7f5ef;color:#17324d;margin:0;padding:30px}
-    main{max-width:700px;margin:auto;background:white;padding:30px;border-radius:22px;box-shadow:0 14px 40px rgba(23,50,77,.1)}
-    h1{font-family:Georgia,serif}
-    input{width:100%;padding:14px;border:1px solid #ccd4da;border-radius:10px;font-size:16px;box-sizing:border-box}
-    button{margin-top:12px;padding:13px 18px;border:0;border-radius:10px;background:#17324d;color:#fff;font-weight:700;cursor:pointer}
-    #qrcode{margin:25px auto;text-align:center}
-    .note{color:#65727e;line-height:1.6}
-  </style>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Mmakau Community Library - QR Code
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            font-family:
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #f7f5ef;
+
+            color: #17324d;
+
+        }
+
+
+        .container {
+
+            width: min(
+                600px,
+                100%
+            );
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(
+                    23,
+                    50,
+                    77,
+                    0.10
+                );
+
+            text-align: center;
+
+        }
+
+
+        h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        p {
+
+            color: #65727e;
+
+            line-height: 1.6;
+
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border:
+                1px solid
+                #d5dce1;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            margin-top: 15px;
+
+        }
+
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 12px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #17324d;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+        }
+
+
+        button:hover {
+
+            background: #23658a;
+
+        }
+
+
+        #qrcode {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+
+        .back {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            color: #23658a;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<main>
-  <h1>QR Code Generator</h1>
-  <p class="note">After publishing <strong>index.html</strong>, paste the final public website address below. Then generate and download the QR code for your library poster/sign.</p>
-  <input id="url" type="url" placeholder="https://your-library-website.example">
-  <br>
-  <button onclick="makeQR()">Generate QR Code</button>
-  <div id="qrcode"></div>
-  <p class="note">Tip: The QR code should point to the permanent website address, not to a file stored only on your computer.</p>
-</main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script>
-function makeQR(){
-  const url=document.getElementById("url").value.trim();
-  const box=document.getElementById("qrcode");
-  box.innerHTML="";
-  if(!url){ box.textContent="Please enter the website URL first."; return; }
-  new QRCode(box,{text:url,width:260,height:260});
-}
-</script>
+
+
+    <div class="container">
+
+
+        <h1>
+            Mmakau Community Library
+        </h1>
+
+
+        <p>
+
+            Enter the public website address
+            below to generate the QR code
+            visitors will use to access the
+            library website.
+
+        </p>
+
+
+        <input
+            type="url"
+            id="websiteURL"
+            placeholder="https://example.com"
+        >
+
+
+        <button
+            onclick="generateQR()"
+        >
+            Generate QR Code
+        </button>
+
+
+        <div id="qrcode"></div>
+
+
+        <a
+            href="index.html"
+            class="back"
+        >
+            ← Back to Library Website
+        </a>
+
+    </div>
+
+
+
+    <!-- QR Code Library -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    ></script>
+
+
+    <script>
+
+        function generateQR() {
+
+            const url =
+                document
+                .getElementById(
+                    "websiteURL"
+                )
+                .value
+                .trim();
+
+
+            const qrContainer =
+                document.getElementById(
+                    "qrcode"
+                );
+
+
+            qrContainer.innerHTML = "";
+
+
+            if (!url) {
+
+                alert(
+                    "Please enter the website URL."
+                );
+
+                return;
+
+            }
+
+
+            new QRCode(
+                qrContainer,
+                {
+                    text: url,
+
+                    width: 260,
+
+                    height: 260,
+
+                    correctLevel:
+                        QRCode.CorrectLevel.H
+                }
+            );
+
+        }
+
+    </script>
+
+
 </body>
+
 </html>
