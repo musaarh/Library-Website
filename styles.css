@@ -1,0 +1,227 @@
+:root {
+  --navy: #17324d;
+  --blue: #23658a;
+  --gold: #d8a928;
+  --red: #a94b4b;
+  --cream: #f7f5ef;
+  --white: #ffffff;
+  --text: #1f2933;
+  --muted: #65727e;
+  --border: #e2e6e9;
+  --shadow: 0 14px 40px rgba(23, 50, 77, .10);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(216,169,40,.20), transparent 30%),
+    linear-gradient(135deg, #17324d, #23658a);
+  color: white;
+  padding: 48px 20px 70px;
+  text-align: center;
+}
+
+.hero-inner { max-width: 850px; margin: auto; }
+
+.logo {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 18px;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.eyebrow {
+  margin: 0 0 7px;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .82;
+}
+
+.hero h1 {
+  margin: 6px 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.1rem, 7vw, 4rem);
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 600px;
+  color: rgba(255,255,255,.88);
+}
+
+.container {
+  width: min(920px, calc(100% - 32px));
+  margin: -30px auto 50px;
+  position: relative;
+}
+
+.card, .contact-card, .status-card, .qr-section {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.status-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+}
+
+.status-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #8a9299;
+  flex: 0 0 auto;
+}
+
+.status-card strong { display: block; }
+.status-card p { margin: 2px 0 0; color: var(--muted); }
+
+.card {
+  padding: clamp(24px, 5vw, 40px);
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: #edf5f8;
+  font-size: 1.4rem;
+}
+
+.section-heading h2, .contact-card h2, .qr-section h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.hours { border-top: 1px solid var(--border); }
+
+.hour-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hour-row strong { color: var(--blue); }
+.hour-row.closed strong { color: var(--red); }
+
+.rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rules li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--border);
+  font-weight: 650;
+}
+
+.rules li:last-child { border-bottom: 0; }
+
+.rules li span:first-child {
+  width: 35px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.contact-card {
+  padding: clamp(24px, 5vw, 35px);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: linear-gradient(135deg, #fff, #eef7f9);
+}
+
+.contact-card p:not(.eyebrow) {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.email-button {
+  display: inline-block;
+  padding: 13px 18px;
+  background: var(--navy);
+  color: white;
+  border-radius: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.email-button:hover { background: var(--blue); }
+
+.qr-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.qr-section p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 650px;
+  margin: 8px auto 18px;
+}
+
+.qr-link {
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+footer {
+  padding: 30px 20px 50px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+footer p { margin: 3px; }
+
+@media (max-width: 650px) {
+  .hero { padding-top: 32px; }
+  .container { width: min(100% - 20px, 920px); margin-top: -25px; }
+  .hour-row { flex-direction: column; gap: 2px; }
+  .contact-card { flex-direction: column; align-items: stretch; }
+  .email-button { text-align: center; }
+}

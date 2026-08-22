@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mmakau Community Library opening hours, rules and contact information.">
+  <title>Mmakau Community Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="assets/logo.jpg" alt="Mmakau Community Library / municipal logo" class="logo">
+      <p class="eyebrow">MAIBUYE COMMUNITY LIBRARY</p>
+      <h1>Mmakau Community Library</h1>
+      <p class="subtitle">Opening hours, library rules and contact information</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="status-card" aria-live="polite">
+      <span class="status-dot"></span>
+      <div>
+        <strong id="todayStatus">Library information</strong>
+        <p id="todayMessage">Please check the opening hours below.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <span class="icon">🕘</span>
+        <div>
+          <p class="eyebrow">WHEN TO VISIT</p>
+          <h2>Opening Hours</h2>
+        </div>
+      </div>
+
+      <div class="hours">
+        <div class="hour-row">
+          <span>Monday – Friday</span>
+          <strong>09:00 – 17:00</strong>
+        </div>
+        <div class="hour-row closed">
+          <span>Saturday &amp; Sunday</span>
+          <strong>Closed</strong>
+        </div>
+        <div class="hour-row closed">
+          <span>Public Holidays</span>
+          <strong>Closed</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <span class="icon">📚</span>
+        <div>
+          <p class="eyebrow">PLEASE OBSERVE</p>
+          <h2>Library Rules</h2>
+        </div>
+      </div>
+
+      <ul class="rules">
+        <li><span>🔇</span><span>Maintain silence at all times.</span></li>
+        <li><span>📱</span><span>Cell phones must be on silent or vibration.</span></li>
+        <li><span>🚫</span><span>No eating.</span></li>
+        <li><span>🚫</span><span>No drinking.</span></li>
+      </ul>
+    </section>
+
+    <section class="contact-card">
+      <div>
+        <p class="eyebrow">QUESTIONS?</p>
+        <h2>Contact the Library</h2>
+        <p>For enquiries, please email us.</p>
+      </div>
+      <a class="email-button" href="mailto:mmakaulibrary@gmail.com">
+        mmakaulibrary@gmail.com
+      </a>
+    </section>
+
+    <section class="qr-section">
+      <p class="eyebrow">SHARE THIS PAGE</p>
+      <h2>Scan. Visit. Stay informed.</h2>
+      <p>Once this website has been published, place its QR code around the library so visitors can quickly access the latest information.</p>
+      <a class="qr-link" href="qr-generator.html">Open QR Code Generator →</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Mmakau Community Library</p>
+    <p>Information is subject to change. Please contact the library for enquiries.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
