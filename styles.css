@@ -203,42 +203,28 @@ a {
 }
 
 .button {
-
     padding:
         13px
         21px;
-
     border-radius: 10px;
-
     font-weight: 750;
-
     transition:
         transform
         0.2s ease,
         background
         0.2s ease;
-
 }
-
 
 .button:hover {
-
     transform: translateY(-2px);
-
 }
-
 
 .primary-button {
-
     background: var(--gold);
-
     color: #17202a;
-
 }
 
-
 .secondary-button {
-
     border:
         1px solid
         rgba(
@@ -247,18 +233,14 @@ a {
             255,
             0.5
         );
-
     color: white;
-
 }
 
 
 /* =========================================
    QUICK INFO
 ========================================= */
-
 .quick-info {
-
     width: min(
         1050px,
         calc(100% - 40px)
@@ -268,74 +250,45 @@ a {
         -65px
         auto
         70px;
-
     position: relative;
-
     display: grid;
-
     grid-template-columns:
         repeat(
             3,
             1fr
         );
-
     gap: 20px;
-
 }
 
-
 .info-card {
-
     background: white;
-
     border:
         1px solid
         var(--border);
-
     border-radius: 20px;
-
     padding: 28px;
-
     text-align: center;
-
     box-shadow: var(--shadow);
-
 }
-
 
 .info-icon {
-
     font-size: 2rem;
-
     margin-bottom: 10px;
-
 }
-
 
 .info-card h3 {
-
     color: var(--navy);
-
     margin-bottom: 5px;
-
 }
-
 
 .info-card p {
-
     color: var(--muted);
-
 }
 
-
 .info-card strong {
-
     display: block;
-
     color: var(--blue);
-
     font-size: 1.25rem;
-
 }
 
 
@@ -344,24 +297,18 @@ a {
 ========================================= */
 
 .section {
-
     width: min(
         950px,
         calc(100% - 40px)
     );
-
     margin:
         0
         auto
         80px;
-
 }
 
-
 .light-section {
-
     width: 100%;
-
     padding:
         80px
         max(
@@ -370,56 +317,37 @@ a {
                 (100vw - 950px) / 2
             )
         );
-
     background: #eef5f7;
-
 }
-
 
 .section-heading {
-
     text-align: center;
-
     margin-bottom: 40px;
-
 }
 
-
 .section-label {
-
     font-size: 0.75rem;
-
     font-weight: 800;
-
     letter-spacing: 0.15em;
-
     color: var(--blue);
-
     margin-bottom: 8px;
-
 }
 
 
 .section-heading h2 {
-
     font-family:
         Georgia,
         "Times New Roman",
         serif;
-
     color: var(--navy);
-
     font-size:
         clamp(
             2rem,
             5vw,
             3rem
         );
-
     margin-bottom: 10px;
-
 }
-
 
 .section-heading > p:last-child {
     max-width: 650px;
@@ -1067,18 +995,13 @@ footer {
     margin: 5px 0 0;
 }
 
-
 /* =========================================
    MOBILE RESPONSIVENESS
 ========================================= */
 
 @media (max-width: 768px) {
 
-    .membership-fees {
-        grid-template-columns: 1fr;
-    }
-
-    .benefits-grid {
+    .membership-cards {
         grid-template-columns: 1fr;
     }
 
@@ -1086,7 +1009,7 @@ footer {
         grid-template-columns:
             1fr 1fr 1fr;
 
-        padding: 15px 15px;
+        padding: 15px;
 
         font-size: 14px;
     }
