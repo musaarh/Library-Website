@@ -984,13 +984,19 @@ footer {
 }
 
 .service-header h3 {
-    margin: 0 0 5px;
-    color: #1d3953;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 7px;
 }
 
 .service-header p {
     margin: 0;
     color: #747d84;
+    font-size: 0.95rem;
 }
 
 
@@ -1008,6 +1014,7 @@ footer {
         1fr 1fr 1fr;
     padding: 18px 30px;
     border-bottom: 1px solid #eeeeee;
+    font-size: 0.95rem;
     align-items: center;
 }
 
@@ -1022,7 +1029,8 @@ footer {
 }
 
 .pricing-row strong {
-    color: #27688b;
+    color: var(--blue);
+    font-weight: 800;
 }
 
 .pricing-note {
