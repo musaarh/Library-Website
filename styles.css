@@ -1067,3 +1067,98 @@ footer {
     }
 
 }
+
+/* =========================================
+   MOBILE — MEMBERSHIP & SERVICES
+========================================= */
+
+@media (max-width: 900px) {
+
+    .membership-fees {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .membership-section,
+    .services-section {
+        padding:
+            70px
+            20px;
+    }
+
+    .membership-fees {
+        grid-template-columns:
+            1fr;
+
+        max-width: 450px;
+    }
+
+    .benefits-grid {
+        grid-template-columns:
+            1fr;
+
+        max-width: 450px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .membership-card {
+        padding:
+            32px
+            22px;
+    }
+
+    .membership-price,
+    .price {
+        font-size: 2.7rem;
+    }
+
+    .benefit-card {
+        padding:
+            28px
+            22px;
+    }
+
+    .service-header {
+        padding:
+            28px
+            20px
+            22px;
+    }
+
+    .pricing-row {
+        padding:
+            14px
+            15px;
+
+        font-size: 0.85rem;
+    }
+
+    .pricing-note {
+        padding:
+            18px
+            16px;
+    }
+
+}
