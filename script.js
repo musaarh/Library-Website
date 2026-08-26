@@ -185,20 +185,11 @@ setInterval(
 
 
 /* =========================================
-   CURRENT YEAR
-========================================= */
-
-document.getElementById(
-    "year"
-).textContent =
-    new Date().getFullYear();
-
-
-/* =========================================
-   FOOTER
+   DYNAMIC FOOTER
 ========================================= */
 
 function renderFooter() {
+
     const footer = document.getElementById("footer");
 
     if (!footer) return;
@@ -206,43 +197,99 @@ function renderFooter() {
     const currentYear = new Date().getFullYear();
 
     footer.innerHTML = `
-        <footer class="site-footer">
-            <div class="footer-content">
 
-                <div class="footer-brand">
-                    <h3>Mmakau Community Library</h3>
+        <footer>
+
+            <div class="footer-container">
+
+                <!-- LIBRARY -->
+
+                <div>
+
+                    <h3>
+                        Mmakau Community Library
+                    </h3>
+
                     <p>
-                        A place to read, learn, study, access information
-                        and connect with the community.
+                        Serving the community through
+                        reading, learning and access
+                        to information.
                     </p>
+
                 </div>
 
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="#home">Home</a>
-                    <a href="#opening-hours">Opening Hours</a>
-                    <a href="#membership">Membership</a>
-                    <a href="#services">Services</a>
-                    <a href="#rules">Rules</a>
-                    <a href="#contact">Contact</a>
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#hours">
+                        Opening Hours
+                    </a>
+
+                    <a href="#membership">
+                        Membership
+                    </a>
+
+                    <a href="#services">
+                        Services
+                    </a>
+
+                    <a href="#rules">
+                        Rules
+                    </a>
+
                 </div>
 
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>Mmakau Community Library</p>
-                    <p>Monday – Friday: 09:00 – 17:00</p>
+
+                <!-- CONTACT -->
+
+                <div>
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <a href="mailto:mmakaulibrary@gmail.com">
+                        mmakaulibrary@gmail.com
+                    </a>
+
                 </div>
 
             </div>
+
+
+            <!-- FOOTER BOTTOM -->
 
             <div class="footer-bottom">
+
                 <p>
-                    © ${currentYear} Mmakau Community Library.
+
+                    © ${currentYear}
+                    Mmakau Community Library.
+
                     All rights reserved.
+
                 </p>
+
             </div>
+
         </footer>
     `;
 }
 
-document.addEventListener("DOMContentLoaded", renderFooter);
+
+/* Render footer after page loads */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    renderFooter
+);
