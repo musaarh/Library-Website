@@ -1203,11 +1203,12 @@ footer {
        so it gets the full card width.
     */
     .service-header {
-        display: grid;
-        grid-template-columns: auto 1fr;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        column-gap: 16px;
-        row-gap: 14px;
+        justify-content: center;
+        text-align: center;
+        gap: 14px;
         padding: 28px 20px 24px;
     }
 
@@ -1223,10 +1224,10 @@ footer {
     }
 
     .service-header p {
-        grid-column: 1 / -1;
+        flex-basis: 100%;
         width: 100%;
-        max-width: none;
-        margin: 0;
+        max-width: 360px;
+        margin: 0 auto;
         text-align: center;
         font-size: 1rem;
         line-height: 1.6;
