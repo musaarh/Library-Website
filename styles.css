@@ -1170,3 +1170,92 @@ footer {
     }
 
 }
+
+/* =========================================
+   MOBILE SERVICES FIX
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* Keep the services section inside the phone width */
+    #services {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #services .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Service cards */
+    #services .service-card {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* Top part of each service card */
+    #services .service-card-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding: 30px 24px;
+        box-sizing: border-box;
+    }
+
+    /* Service icon */
+    #services .service-card-header .service-icon {
+        flex-shrink: 0;
+    }
+
+    /* Service title */
+    #services .service-card-header h3 {
+        margin: 0;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    /* Description */
+    #services .service-card-header p {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    /* Pricing table */
+    #services table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    #services th,
+    #services td {
+        padding: 16px 12px;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    #services th:nth-child(1),
+    #services td:nth-child(1) {
+        width: 30%;
+    }
+
+    #services th:nth-child(2),
+    #services td:nth-child(2),
+    #services th:nth-child(3),
+    #services td:nth-child(3) {
+        width: 35%;
+    }
+}
