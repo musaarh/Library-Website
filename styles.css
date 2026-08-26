@@ -1181,89 +1181,65 @@ footer {
 
 /* =========================================
    MOBILE SERVICES FIX
-   ========================================= */
+========================================= */
 
 @media (max-width: 600px) {
 
-    /* Keep the services section inside the phone width */
-    #services {
+    .services-section {
         width: 100%;
         overflow-x: hidden;
     }
 
-    #services .container {
+    .service-container {
         width: 100%;
         max-width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-        box-sizing: border-box;
+        margin: 25px auto;
     }
 
-    /* Service cards */
-    #services .service-card {
-        width: 100%;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    /* Top part of each service card */
-    #services .service-card-header {
-        display: flex;
-        flex-direction: column;
+    /*
+       On mobile:
+       icon + title stay together,
+       description moves underneath
+       so it gets the full card width.
+    */
+    .service-header {
+        display: grid;
+        grid-template-columns: auto 1fr;
         align-items: center;
-        text-align: center;
-        gap: 12px;
-        padding: 30px 24px;
-        box-sizing: border-box;
+        column-gap: 16px;
+        row-gap: 14px;
+        padding: 28px 20px 24px;
     }
 
-    /* Service icon */
-    #services .service-card-header .service-icon {
-        flex-shrink: 0;
+    .service-icon {
+        font-size: 34px;
+        line-height: 1;
     }
 
-    /* Service title */
-    #services .service-card-header h3 {
+    .service-header h3 {
         margin: 0;
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.2;
     }
 
-    /* Description */
-    #services .service-card-header p {
+    .service-header p {
+        grid-column: 1 / -1;
         width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
+        max-width: none;
+        margin: 0;
+        text-align: center;
         font-size: 1rem;
         line-height: 1.6;
-        text-align: center;
     }
 
-    /* Pricing table */
-    #services table {
-        width: 100%;
-        table-layout: fixed;
+    .pricing-row {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 15px 14px;
+        font-size: 0.9rem;
     }
 
-    #services th,
-    #services td {
-        padding: 16px 12px;
-        font-size: 1rem;
-        text-align: left;
+    .pricing-heading {
+        font-size: 0.9rem;
     }
 
-    #services th:nth-child(1),
-    #services td:nth-child(1) {
-        width: 30%;
-    }
-
-    #services th:nth-child(2),
-    #services td:nth-child(2),
-    #services th:nth-child(3),
-    #services td:nth-child(3) {
-        width: 35%;
-    }
 }
