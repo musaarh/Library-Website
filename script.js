@@ -192,3 +192,57 @@ document.getElementById(
     "year"
 ).textContent =
     new Date().getFullYear();
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+function renderFooter() {
+    const footer = document.getElementById("footer");
+
+    if (!footer) return;
+
+    const currentYear = new Date().getFullYear();
+
+    footer.innerHTML = `
+        <footer class="site-footer">
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <h3>Mmakau Community Library</h3>
+                    <p>
+                        A place to read, learn, study, access information
+                        and connect with the community.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#opening-hours">Opening Hours</a>
+                    <a href="#membership">Membership</a>
+                    <a href="#services">Services</a>
+                    <a href="#rules">Rules</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Mmakau Community Library</p>
+                    <p>Monday – Friday: 09:00 – 17:00</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © ${currentYear} Mmakau Community Library.
+                    All rights reserved.
+                </p>
+            </div>
+        </footer>
+    `;
+}
+
+document.addEventListener("DOMContentLoaded", renderFooter);
