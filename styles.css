@@ -1244,3 +1244,80 @@ footer {
     }
 
 }
+
+/* =========================================
+   WHATSAPP CONTACT
+========================================= */
+
+.whatsapp-contact {
+    margin-top: 20px;
+}
+
+.whatsapp-label {
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    color: #25D366;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+
+
+/* WhatsApp Button */
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 12px 20px;
+    margin-top: 5px;
+
+    background: #25D366;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.whatsapp-icon {
+    font-size: 1.2rem;
+}
+
+
+/* =========================================
+   MOBILE WHATSAPP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .whatsapp-contact {
+        text-align: center;
+    }
+
+    .whatsapp-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
