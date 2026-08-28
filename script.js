@@ -251,17 +251,25 @@ function renderFooter() {
 
 
                 <!-- CONTACT -->
-
+                
                 <div>
-
+                
                     <h4>
                         Contact
                     </h4>
-
+                    
                     <a href="mailto:mmakaulibrary@gmail.com">
                         mmakaulibrary@gmail.com
                     </a>
-
+                    
+                    <a
+                        href="https://wa.me/27679601395"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp
+                    </a>
+                  
                 </div>
 
             </div>
